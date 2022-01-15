@@ -1,2 +1,26 @@
-<p>login works!</p>
-<a routerLink="/user">user</a>
+<div class="wrapper fadeInDown">
+  <p *ngIf="status == true">{{content}}</p>
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMTKwOebiExLqDefT58injnwSP-25CfxLqyVG1ZSqTBfAyi9SZUsSimRFwOR_F353yPHc&usqp=CAU" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form #loginForm="ngForm" (ngSubmit)="loginForm.valid && login(loginForm)">
+      <p *ngIf="username.invalid && username.touched">username có từ 5 đến 15 ký tự</p>
+      <p *ngIf="password.invalid && password.touched">không để trống password</p>
+      <input type="text" id="login" #username="ngModel" required minlength="5" maxlength="15"  class="fadeIn second" ngModel name="username" placeholder="username">
+      <input type="text" id="password" #password="ngModel" required class="fadeIn third" ngModel name="password" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
