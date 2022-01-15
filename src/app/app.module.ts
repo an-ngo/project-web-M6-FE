@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NavbarComponent} from "./shares/navbar/navbar.component";
+
 import { FooterComponent } from './shares/footer/footer.component';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { FooterComponent } from './shares/footer/footer.component';
         NavbarComponent,
         FooterComponent,
     ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
