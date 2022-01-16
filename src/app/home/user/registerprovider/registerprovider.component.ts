@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormArray, FormControl, FormGroup} from "@angular/forms";
 import {RegisterProviderService} from "../../../service/registerProvider/register-provider.service";
 import {Hobby} from "../../../model/hobby";
@@ -10,7 +10,6 @@ import {HobbyService} from "../../../service/hobby/hobby.service";
   styleUrls: ['./registerprovider.component.scss']
 })
 export class RegisterproviderComponent implements OnInit {
-
   formGroup= new FormGroup({
     yearOfBirth: new FormControl(),
     city: new FormControl(),

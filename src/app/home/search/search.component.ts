@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {HomeService} from "../../service/home/home.service";
-import {data} from "jquery";
 
 @Component({
   selector: 'app-search',
@@ -18,7 +17,6 @@ export class SearchComponent implements OnInit {
     console.log(formSearch.value);
     this.homeService.search(formSearch.value).subscribe((data) => {
       this.providers = data.content;
-      console.log(this.providers);
     });
   }
 }

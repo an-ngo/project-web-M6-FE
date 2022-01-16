@@ -26,4 +26,7 @@ export class HomeService {
   public search(formSearch: any): Observable<any>{
     return this.http.post(`${this.URL_API}/users/search`, formSearch);
   }
+  public findProvider(id: any): Observable<any>{
+    return this.http.get(`${this.URL_API}/users/${id}`);
+  }
 }
