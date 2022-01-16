@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
         window.sessionStorage.setItem("role", data.roles[0].authority);
         this.router.navigate(['']).then(()=>{
           window.location.reload();
-        })
+        });
       }
       else {
         this.status = true;

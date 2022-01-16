@@ -7,6 +7,9 @@ import {NavbarComponent} from "./shares/navbar/navbar.component";
 
 import { FooterComponent } from './shares/footer/footer.component';
 import {HttpClientModule} from "@angular/common/http";
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {AngularFireModule} from "@angular/fire/compat";
+import {environment} from "../environments/environment.prod";
 
 @NgModule({
     declarations: [
@@ -18,7 +21,9 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireStorageModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

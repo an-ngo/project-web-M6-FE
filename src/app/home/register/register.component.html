@@ -1,3 +1,4 @@
+<h1 *ngIf="content != null">{{content.message}}</h1>
 <div class="container">
   <div class="card bg-light">
     <article class="card-body mx-auto" style="max-width: 400px;">
@@ -10,45 +11,47 @@
       <p class="divider-text">
         <span class="bg-light">OR</span>
       </p>
-      <form #registerForrm (ngSubmit)="register(registerForrm)">
+      <form #registerForrm="ngForm" (ngSubmit)="register(registerForrm)">
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
           </div>
-          <input name="name" ngModel class="form-control" placeholder="Full name" type="text">
+          <input name="name" required #name="ngModel" ngModel class="form-control" placeholder="Full name" type="text">
+          <p *ngIf="name.invalid && name.touched">không để trống ten</p>
         </div> <!-- form-group// -->
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
           </div>
-          <input name="email" ngModel class="form-control" placeholder="Email address" type="email">
+          <input name="email" email #email="ngModel" ngModel class="form-control" placeholder="Email address" type="email">
+          <p *ngIf="email.invalid && email.touched">vd: your_email@gmail.com</p>
         </div> <!-- form-group// -->
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
           </div>
-          <input name="phone" class="form-control" placeholder="Phone number" type="text">
+          <input name="phone" required #phone="ngModel" ngModel class="form-control" placeholder="Phone number" type="text">
+          <p *ngIf="phone.invalid && phone.touched">không để trống phone</p>
         </div> <!-- form-group// -->
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-building"></i> </span>
           </div>
-          <input name="username" ngModel class="form-control" placeholder="username" type="text">
+          <input name="username" required #username="ngModel" minlength="6" maxlength="15" ngModel class="form-control" placeholder="username" type="text">
+          <p *ngIf="username.invalid && username.touched">username có từ 6 đến 15 ký tự</p>
         </div> <!-- form-group end.// -->
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
           </div>
-          <input class="form-control" name="password" ngModel placeholder="Create password" type="password">
+          <input class="form-control" name="password" required #password="ngModel" minlength="6" maxlength="15" ngModel placeholder="Create password" type="password">
+          <p *ngIf="username.invalid && username.touched">password có từ 6 đến 15 ký tự</p>
         </div> <!-- form-group// -->
         <div class="form-group">
           Avatar
-          <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-images" viewBox="0 0 16 16">
-          <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-          <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/>
-        </svg>
           <i class="bi bi-images"></i>
-          <input type="file">
+          <input type="file" (change)="uploadAvatar($event)">
+          <img *ngIf="imageUrl != ''" width="50px" height="50px" [src]="imageUrl" alt="">
         </div>
 
         <div class="form-group">
