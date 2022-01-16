@@ -4,6 +4,7 @@ import {HomeComponent} from "./home/home.component";
 import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
 import {CarouselModule} from "ngx-owl-carousel-o";
+import {SearchComponent} from "./search/search.component";
 
 const routes: Routes = [
   {
@@ -20,6 +21,9 @@ const routes: Routes = [
   },
   {
     path: 'user', loadChildren: () => import('./user/user.module').then(modules => modules.UserModule)
+  },
+  {
+    path: 'search', component: SearchComponent
   }
 ];
 

@@ -11,5 +11,4 @@ export class RegisterproviderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
