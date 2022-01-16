@@ -12,9 +12,9 @@ export class UsersService {
 
   constructor(private http: HttpClient) { }
 
-  public getAll(page?:string|null): Observable<any> {
+  public getAll(): Observable<any> {
 
-      return this.http.get(`${this.URL_API}/users/list/page`);
+      return this.http.get(`${this.URL_API}/users/list`);
 
   }
 
