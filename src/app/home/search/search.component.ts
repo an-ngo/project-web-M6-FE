@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {HomeService} from "../../service/home/home.service";
-import {data} from "jquery";
 
 @Component({
   selector: 'app-search',
