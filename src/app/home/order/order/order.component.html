@@ -1,0 +1,41 @@
+<div class="container">
+  <div class=" text-center mt-5 ">
+  <h1><a routerLink="/provider/{{provider.id}}">Book ngay cháu {{provider.name}}</a></h1>
+    <h3 *ngIf="order != null">Order thành công <a routerLink="/order/chi-tiet/{{order.id}}">Xem chi tiết</a></h3>
+</div>
+  <div class="row ">
+    <div class="col-lg-7 mx-auto">
+      <div class="card mt-2 mx-auto p-4 bg-light">
+        <div class="card-body bg-light">
+          <div class="container">
+            <form id="contact-form" role="form" #orderForm="ngForm" (ngSubmit)="orderForm.valid && book(orderForm)">
+              <div class="controls">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group"> <label for="form_name">Nơi hẹn *</label> <input id="form_name" type="text" name="place" ngModel class="form-control" required data-error="Firstname is required."> </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group"> <label for="form_lastname">Số giờ muốn sở hữu *</label> <input id="form_lastname" type="number" ngModel name="duration" class="form-control" required data-error="Lastname is required."> </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group"> <label for="form_email">Hẹn cháu ngày *</label> <input id="form_email" type="date" name="date" required ngModel class="form-control" data-error="Valid email is required."> </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div *ngFor="let service of provider.serviceByProviderList"><input type="checkbox" (click)="checkBox(service.name)">{{service.name}}&nbsp;{{service.price}}$</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <input type="submit" value="Book">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> <!-- /.8 -->
+    </div> <!-- /.row-->
+  </div>
+</div>

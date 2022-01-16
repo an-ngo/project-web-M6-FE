@@ -28,6 +28,9 @@ const routes: Routes = [
   },
   {
     path: 'provider/:id', component: ProviderComponent
+  },
+  {
+    path: 'order', loadChildren: () => import('./order/order.module').then(modules => modules.OrderModule)
   }
 ];
 
