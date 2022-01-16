@@ -7,13 +7,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {CarouselModule} from "ngx-owl-carousel-o";
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,

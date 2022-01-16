@@ -1,0 +1,364 @@
+<div>
+  <div class="banner-container">
+    <div class="row no-margin">
+
+    </div>
+    <div class="row no-margin">
+
+      <div class="region region-content">
+
+        <section
+          id="block-views-exp-frontpage-members-page-1"
+          class="block block-views clearfix  "
+        >
+          <h2 class="block-title">Hẹn hò đi chơi</h2>
+          <form
+            action="/thanh-vien"
+            #formSearch="ngForm" (ngSubmit)="search(formSearch)"
+            id="views-exposed-form-frontpage-members-page-1"
+            accept-charset="UTF-8"
+          >
+            <div>
+              <div class="views-exposed-form">
+                <div class="views-exposed-widgets clearfix">
+                  <div
+                    id="edit-field-gender-value-wrapper"
+                    class="views-exposed-widget views-widget-filter-field_gender_value"
+                  >
+                    <label for="edit-field-gender-value">
+                      cần tìm
+                    </label>
+                    <div class="views-widget">
+                      <div
+                        class="form-item form-item-field-gender-value form-type-select form-group"
+                      >
+                        <select
+                          class="form-control form-select"
+                          id="edit-field-gender-value"
+                          name="gender" ngModel
+                        >
+                          <option value="">- Tất cả -</option>
+                          <option value="Nam">Người Nam</option>
+                          <option value="Nu" selected="selected">
+                            Người nữ
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="edit-field-birthdate-value-wrapper"
+                    class="views-exposed-widget views-widget-filter-field_birthdate_value"
+                  >
+                    <div class="views-widget">
+                      <div id="edit-field-birthdate-value-min-wrapper">
+                        <div
+                          id="edit-field-birthdate-value-min-inside-wrapper"
+                        >
+                          <div class="container-inline-date">
+                            <div
+                              class="form-item form-item-field-birthdate-value-min form-type-date-select form-group"
+                            >
+                              <label
+                                class="control-label"
+                                for="edit-field-birthdate-value-min"
+                              >Từ Năm</label
+                              >
+                              <div
+                                id="edit-field-birthdate-value-min"
+                                class="date-padding clearfix"
+                              >
+                                <div
+                                  class="form-item form-item-field-birthdate-value-min-year form-type-select form-group"
+                                >
+                                  <div class="date-year">
+                                    <select
+                                      class="date-year form-control form-select"
+                                      id="edit-field-birthdate-value-min-year"
+                                      name="beforeYear" ngModel
+                                    >
+                                      <option value="">-Năm</option>
+                                      <option value="2004">2004</option>
+                                      <option value="2003">2003</option>
+                                      <option value="2002">2002</option>
+                                      <option value="2001">2001</option>
+                                      <option value="2000">2000</option>
+                                      <option value="1999">1999</option>
+                                      <option value="1998">1998</option>
+                                      <option value="1997">1997</option>
+                                      <option value="1996">1996</option>
+                                      <option
+                                        value="1995"
+                                        selected="selected"
+                                      >
+                                        1995
+                                      </option>
+                                      <option value="1994">1994</option>
+                                      <option value="1993">1993</option>
+                                      <option value="1992">1992</option>
+                                      <option value="1991">1991</option>
+                                      <option value="1990">1990</option>
+                                      <option value="1989">1989</option>
+                                      <option value="1988">1988</option>
+                                      <option value="1987">1987</option>
+                                      <option value="1986">1986</option>
+                                      <option value="1985">1985</option>
+                                      <option value="1984">1984</option>
+                                      <option value="1983">1983</option>
+                                      <option value="1982">1982</option>
+                                    </select>
+                                  </div>
+                                  <label
+                                    class="control-label element-invisible"
+                                    for="edit-field-birthdate-value-min-year"
+                                  ></label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="edit-field-birthdate-value-max-wrapper">
+                        <div
+                          id="edit-field-birthdate-value-max-inside-wrapper"
+                        >
+                          <div class="container-inline-date">
+                            <div
+                              class="form-item form-item-field-birthdate-value-max form-type-date-select form-group"
+                            >
+                              <label
+                                class="control-label"
+                                for="edit-field-birthdate-value-max"
+                              >Đến Năm</label
+                              >
+                              <div
+                                id="edit-field-birthdate-value-max"
+                                class="date-padding clearfix"
+                              >
+                                <div
+                                  class="form-item form-item-field-birthdate-value-max-year form-type-select form-group"
+                                >
+                                  <div class="date-year">
+                                    <select
+                                      class="date-year form-control form-select"
+                                      id="edit-field-birthdate-value-max-year"
+                                      name="afterYear" ngModel
+                                    >
+                                      <option value="">-Năm</option>
+                                      <option value="2004">2004</option>
+                                      <option value="2003">2003</option>
+                                      <option value="2002">2002</option>
+                                      <option
+                                        value="2001"
+                                        selected="selected"
+                                      >
+                                        2001
+                                      </option>
+                                      <option value="2000">2000</option>
+                                      <option value="1999">1999</option>
+                                      <option value="1998">1998</option>
+                                      <option value="1997">1997</option>
+                                      <option value="1996">1996</option>
+                                      <option value="1995">1995</option>
+                                      <option value="1994">1994</option>
+                                      <option value="1993">1993</option>
+                                      <option value="1992">1992</option>
+                                      <option value="1991">1991</option>
+                                      <option value="1990">1990</option>
+                                      <option value="1989">1989</option>
+                                      <option value="1988">1988</option>
+                                      <option value="1987">1987</option>
+                                      <option value="1986">1986</option>
+                                      <option value="1985">1985</option>
+                                      <option value="1984">1984</option>
+                                      <option value="1983">1983</option>
+                                      <option value="1982">1982</option>
+                                    </select>
+                                  </div>
+                                  <label
+                                    class="control-label element-invisible"
+                                    for="edit-field-birthdate-value-max-year"
+                                  ></label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="views-exposed-widget views-widget-filter-field_cities_tid"
+                  >
+                    <label for="edit-field-cities-tid"> Tại TP </label>
+                    <div class="views-widget">
+                      <div
+                        class="form-item form-item-field-cities-tid form-type-select form-group"
+                      >
+                        <select
+                          class="form-control form-select"
+                          id="edit-field-cities-tid"
+                          name="city" ngModel
+                        >
+                          <option value="">- Tất cả -</option>
+                          <option value="Ha Noi">Hà Nội</option>
+                          <option value="HCM" selected="selected">
+                            Tp Hồ Chí Minh
+                          </option>
+                          <option value="Da Nang">Đà Nẵng</option>
+                          <option value="Hue">Huế</option>
+                          <option value="An Giang">An Giang</option>
+                          <option value="Ba Ria">Bà Rịa</option>
+                          <option value="Ba Ria Vung Tau">Bà Rịa - Vũng Tàu</option>
+                          <option value="Bac Giang">Bắc Giang</option>
+                          <option value="Bac Kan">Bắc Kạn</option>
+                          <option value="Bac Lieu">Bạc Liêu</option>
+                          <option value="Bac Ninh">Bắc Ninh</option>
+                          <option value="Ben Tre">Bến Tre</option>
+                          <option value="Bien Hoa">Biên Hòa</option>
+                          <option value="Binh Duong">Bình Dương</option>
+                          <option value="Binh Phuoc">Bình Phước</option>
+                          <option value="Binh Thuan">Bình Thuận</option>
+                          <option value="Binh Dinh">Bình Định</option>
+                          <option value="Buon Ma Thuat">Buôn Ma Thuột</option>
+                          <option value="Ca Mau">Cà Mau</option>
+                          <option value="Can Tho">Cần Thơ</option>
+                          <option value="Cao Bang">Cao Bằng</option>
+                          <option value="Cao Lanh">Cao Lãnh</option>
+                          <option value="Gia Lai">Gia Lai</option>
+                          <option value="Gia Nghia">Gia Nghĩa</option>
+                          <option value="Ha Giang">Hà Giang</option>
+                          <option value="Ha Long">Hạ Long</option>
+                          <option value="Ha Nam">Hà Nam</option>
+                          <option value="Ha Tinh">Hà Tĩnh</option>
+                          <option value="Hai Duong">Hải Dương</option>
+                          <option value="Hai Phong">Hải Phòng</option>
+                          <option value="Hau Giang">Hậu Giang</option>
+                          <option value="Hoa Binh">Hòa Bình</option>
+                          <option value="Hung Yen">Hưng Yên</option>
+                          <option value="Khanh Hoa">Khánh Hòa</option>
+                          <option value="Kien Giang">Kiên Giang</option>
+                          <option value="Kon Tum">Kon Tum</option>
+                          <option value="Lai Chau">Lai Châu</option>
+                          <option value="Lam Dong">Lâm Đồng</option>
+                          <option value="Lang Son">Lạng Sơn</option>
+                          <option value="Lao Cai">Lào Cai</option>
+                          <option value="Long An">Long An</option>
+                          <option value="Long Xuyen">Long Xuyên</option>
+                          <option value="My Tho">Mỹ Tho</option>
+                          <option value="Nam Dinh">Nam Định</option>
+                          <option value="Nghe An">Nghệ An</option>
+                          <option value="Nha Trang">Nha Trang</option>
+                          <option value="Ninh Binh">Ninh Bình</option>
+                          <option value="Ninh Thuan">Ninh Thuận</option>
+                          <option value="Phan Rang">
+                            Phan Rang - Tháp Chàm
+                          </option>
+                          <option value="Phan Thiet">Phan Thiết</option>
+                          <option value="Phu Ly">Phủ Lý</option>
+                          <option value="Phu Tho">Phú Thọ</option>
+                          <option value="Phu Yen">Phú Yên</option>
+                          <option value="Pleiku">Pleiku</option>
+                          <option value="Quang Binh">Quảng Bình</option>
+                          <option value="Quang Nam">Quảng Nam</option>
+                          <option value="Quang Ngai">Quảng Ngãi</option>
+                          <option value="Quang Ninh">Quảng Ninh</option>
+                          <option value="Quang Tri">Quảng Trị</option>
+                          <option value="Quy Nhon">Quy Nhơn</option>
+                          <option value="Rach Gia">Rạch Giá</option>
+                          <option value="Soc trang">Sóc Trăng</option>
+                          <option value="Son La">Sơn La</option>
+                          <option value="Tam Ky">Tam Kỳ</option>
+                          <option value="Tan An">Tân An</option>
+                          <option value="Tay Ninh">Tây Ninh</option>
+                          <option value="Thai Binh">Thái Bình</option>
+                          <option value="Thai Nguyen">Thái Nguyên</option>
+                          <option value="Thanh Hoa">Thanh Hóa</option>
+                          <option value="Thu Dau">Thủ Dầu Một</option>
+                          <option value="Hue">Thừa Thiên Huế</option>
+                          <option value="Tien Giang">Tiền Giang</option>
+                          <option value="Tra Vinh">Trà Vinh</option>
+                          <option value="Tuy hoa">Tuy Hòa</option>
+                          <option value="Tuyen Quang">Tuyên Quang</option>
+                          <option value="Vi Thanh">Vị Thanh</option>
+                          <option value="Viet Tri">Việt Trì</option>
+                          <option value="Vinh">Vinh</option>
+                          <option value="Vinh Long">Vĩnh Long</option>
+                          <option value="Vinh Phuc">Vĩnh Phúc</option>
+                          <option value="Vinh Yen">Vĩnh Yên</option>
+                          <option value="Yen Bai">Yên Bái</option>
+                          <option value="Da Lat">Đà Lạt</option>
+                          <option value="Dak Lak">Đắk Lắk</option>
+                          <option value="Dak Nong">Đắk Nông</option>
+                          <option value="Dien Bien">Điện Biên</option>
+                          <option value="Dien bien phu">Điện Biên Phủ</option>
+                          <option value="Ha Dong">Hà Đông</option>
+                          <option value="Dong Hoi">Đồng Hới</option>
+                          <option value="Dong Nai">Đồng Nai</option>
+                          <option value="Dong Thap">Đồng Tháp</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="edit-field-cities-tid-wrapper"
+                    class="views-exposed-widget views-widget-filter-field_cities_tid"
+                  >
+                    <label for="edit-field-cities-tid"> Tại TP </label>
+                    <div class="views-widget">
+                      <div
+                        class="form-item form-item-field-cities-tid form-type-select form-group"
+                      >
+                        <select
+                          class="form-control form-select"
+                          name="country" ngModel
+                        >
+                          <option value="">- Tất cả -</option>
+                          <option value="My">American Tho</option>
+                          <option value="Viet Nam" selected="selected">
+                            Viet NAm
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="views-exposed-widget views-submit-button">
+                    <button
+                      type="submit"
+                      id="edit-submit-frontpage-members"
+                      name=""
+                      value="Thực hiện tìm"
+                      class="btn btn-default form-submit btn-danger"
+                    >
+                      Thực hiện tìm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<table class="table table-striped">
+  <tr>
+    <th>Tên</th>
+    <th>Năm Sinh</th>
+    <th>Mô tả</th>
+    <th>Ảnh đại diện</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let provider of providers">
+    <td>{{provider.name}}</td>
+    <td>{{provider.gender}}</td>
+    <td>{{provider.description}}</td>
+    <td><img [src]="provider.avatar" alt="" width="50px" height="50px"></td>
+    <td><a href="">Check info</a></td>
+  </tr>
+</table>

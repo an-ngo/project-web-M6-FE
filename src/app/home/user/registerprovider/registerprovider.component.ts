@@ -87,5 +87,4 @@ export class RegisterproviderComponent implements OnInit {
       console.log(data2)
     })
   }
-
 }

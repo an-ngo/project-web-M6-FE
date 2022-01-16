@@ -22,9 +22,11 @@ export class LoginComponent implements OnInit {
         this.status = false;
         console.log(data);
         window.sessionStorage.setItem("token", data.token);
-        window.sessionStorage.setItem("avatar", data.avartar);
+        window.sessionStorage.setItem("avatar", data.avatar);
         window.sessionStorage.setItem("name", data.name);
-        window.sessionStorage.setItem("role", data.roles[0].authority);
+        for (let i = 0; i < data.roles.length; i++){
+          window.sessionStorage.setItem("role", data.roles[i].authority);
+        }
         this.router.navigate(['']).then(()=>{
           window.location.reload();
         });
