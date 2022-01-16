@@ -27,4 +27,13 @@ export class OrdersService {
   public createOrder(orderForm: any): Observable<any>{
     return this.http.post(`${this.URL_API}/orders`, orderForm, this.httpOptions);
   }
+  public confirmOrder(id: any): Observable<any>{
+    return this.http.put(`${this.URL_API}/orders/received/${id}`, this.httpOptions);
+  }
+  public completeOrder(id: any): Observable<any>{
+    return this.http.put(`${this.URL_API}/orders/complete/${id}`, this.httpOptions);
+  }
+  public deleteOrder(id: any): Observable<any>{
+    return this.http.delete(`${this.URL_API}/orders/${id}`);
+  }
 }
