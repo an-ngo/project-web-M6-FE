@@ -1,1 +1,49 @@
-<p>adminpage works!</p>
+<h1 class="m-auto text-center">Admin Page</h1>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Link FB</th>
+      <th scope="col">Avatar</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of listUser5; index as i;">
+      <th scope="row">{{i+1}}</th>
+      <td>{{user.name}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.link_facebook}}</td>
+      <td><img [src]="user.avatar" alt="avatar" class="avatar_list"></td>
+    </tr>
+    </tbody>
+  </table>
+
+
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="page-item" *ngFor="let number of totalpage; index as i;">
+        <a class="page-link" routerLink="/admin?page={{i}}">{{number}}</a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
