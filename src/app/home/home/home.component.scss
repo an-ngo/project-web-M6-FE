@@ -1,5 +1,5 @@
 .banner-container .region.region-content {
-  position: absolute;
+
   right: 0;
   width: 320px;
 }
@@ -45,9 +45,106 @@ div#home-banner-kbd.no-margin {
   position: relative;
   height: 210px;
 }
-.no-margin {
+.row.no-margin {
   margin-left: 0;
   margin-right: 0;
   position: relative;
+
+}
+
+div.region-front2, div.region-front3 {
+  display: inline-flex;
+  width: 100%;
+}
+
+div.region-front1, div.region-front2, div.region-front3 {
+  border-bottom: 1px solid #ded3cc;
+  display: block;
+  clear: both;
+  padding-bottom: 25px;
+  padding-top: 40px;
+}
+
+div.region-front3 .block {
+  width: 460px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+div.region-front3 h2.block-title {
+  padding-bottom: 30px;
+  color: #4f4942;
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.block-title {
+  padding-bottom: 10px;
+  color: #4f4942;
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  font-size: 18px;
+  letter-spacing: -1px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+img.section-block-icon {
+  float: left;
+  margin: 0 20px 0 0;
+  vertical-align: top;
+}
+
+.extra-wrap {
+  overflow: hidden;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a.link-button:last-child {
+  margin-right: 0;
+}
+
+a.link-next, .block a.link-button, .buy-now, .primary, button[type="submit"], .custom-transaction-form a.custom-button, .confirm-page-wrapper a.custom-button, a#link-button-submit {
+  background: #de4d27 none repeat scroll 0 0;
+}
+
+a.link-button {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#block-views-node-functions-block div.views-row div.views-field-view-node a, a.link-button, .page-content a.link-button, button, a#edit-cancel, button[type="submit"], .custom-transaction-form a.custom-button, .confirm-page-wrapper a.custom-button, a#link-button-submit {
+  color: #fff !important;
+  display: inline-block;
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 30px;
+  padding: 4px 23px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  border-radius: 3px;
+  border: none;
+}
+
+#block-block-4{
+
 }
 
