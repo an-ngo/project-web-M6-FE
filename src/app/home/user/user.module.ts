@@ -6,6 +6,7 @@ import {UserpageComponent} from "./userpage/userpage.component";
 import {RegisterproviderComponent} from "./registerprovider/registerprovider.component";
 import {EditComponent} from "./edit/edit.component";
 import { ProviderComponent } from './provider/provider.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ProviderComponent } from './provider/provider.component';
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class UserModule { }
