@@ -5,6 +5,7 @@ import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
 import {CarouselModule} from "ngx-owl-carousel-o";
 import {SearchComponent} from "./search/search.component";
+import {ProviderComponent} from "./user/provider/provider.component";
 
 const routes: Routes = [
   {
@@ -24,6 +25,9 @@ const routes: Routes = [
   },
   {
     path: 'search', component: SearchComponent
+  },
+  {
+    path: 'provider/:id', component: ProviderComponent
   }
 ];
 

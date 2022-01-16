@@ -17,7 +17,6 @@ export class SearchComponent implements OnInit {
     console.log(formSearch.value);
     this.homeService.search(formSearch.value).subscribe((data) => {
       this.providers = data.content;
-      console.log(this.providers);
     });
   }
 }

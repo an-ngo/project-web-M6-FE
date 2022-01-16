@@ -15,8 +15,11 @@
         <div class="card-body">
           <h5 class="card-title">{{provider.name}}</h5>
           <h6 class="card-text">{{provider.gender}}</h6>
+          <p class="card-text">{{provider.yearOfBirth}}</p>
+          <p class="card-text">Ngày tham gia: {{provider.joinDate}}</p>
           <p class="card-text">{{provider.description}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <p class="card-text">Lượt xem {{provider.viewCount}}</p>
+          <a href="#" class="btn btn-primary" routerLink="/provider/{{provider.id}}">Book ngay</a>
         </div>
       </div>
     </ng-template>
@@ -32,8 +35,11 @@
         <div class="card-body">
           <h5 class="card-title">{{provider.name}}</h5>
           <h6 class="card-text">{{provider.gender}}</h6>
+          <p class="card-text">{{provider.yearOfBirth}}</p>
+          <p class="card-text">Ngày tham gia: {{provider.joinDate}}</p>
           <p class="card-text">{{provider.description}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <p class="card-text">Lượt xem {{provider.viewCount}}</p>
+          <a href="#" class="btn btn-primary" routerLink="/provider/{{provider.id}}">Book ngay</a>
         </div>
       </div>
     </ng-template>
@@ -50,8 +56,11 @@
         <div class="card-body">
           <h5 class="card-title">{{provider.name}}</h5>
           <h6 class="card-text">{{provider.gender}}</h6>
+          <p class="card-text">{{provider.yearOfBirth}}</p>
+          <p class="card-text">Ngày tham gia: {{provider.joinDate}}</p>
           <p class="card-text">{{provider.description}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <p class="card-text">Lượt xem {{provider.viewCount}}</p>
+          <a href="#" class="btn btn-primary" routerLink="/provider/{{provider.id}}">Book ngay</a>
         </div>
       </div>
     </ng-template>
@@ -59,7 +68,7 @@
 </div>
 
 
-<div class="info"><h2>Top 12 cháu mới tham gia làm phò</h2></div>
+<div class="info"><h2>Top 12 cháu mới nhất</h2></div>
 <div class="container">
   <owl-carousel-o [options]="customOptions">
     <ng-template *ngFor="let provider of getTop12JoinDate" carouselSlide>
@@ -68,8 +77,11 @@
         <div class="card-body">
           <h5 class="card-title">{{provider.name}}</h5>
           <h6 class="card-text">{{provider.gender}}</h6>
+          <p class="card-text">{{provider.yearOfBirth}}</p>
+          <p class="card-text">Ngày tham gia: {{provider.joinDate}}</p>
           <p class="card-text">{{provider.description}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <p class="card-text">Lượt xem {{provider.viewCount}}</p>
+          <a href="#" class="btn btn-primary" routerLink="/provider/{{provider.id}}">Book ngay</a>
         </div>
       </div>
     </ng-template>
