@@ -1,1 +1,71 @@
-<p>registerprovider works!</p>
+<div class="container row">
+  <form class="formControl col-5 offset-4" [formGroup]="formGroup" (ngSubmit)="submit()" >
+    <div class="mb-3">
+      <label for="yearOfBirth" class="form-label">Năm sinh</label>
+      <input type="text" formControlName="yearOfBirth" class="form-control" id="yearOfBirth" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="city" class="form-label">Thành phố</label>
+      <input type="text" formControlName="city" class="form-control" id="city">
+    </div>
+    <div class="mb-3">
+      <label for="country" class="form-label">Quốc tịch</label>
+      <input type="text" formControlName="country" class="form-control" id="country">
+    </div>
+    <div class="mb-3">
+      <label for="height" class="form-label">Chiều Cao</label>
+      <input type="text" formControlName="height" class="form-control" id="height">
+    </div>
+    <div class="mb-3">
+      <label for="weight" class="form-label">Cân nặng</label>
+      <input type="text" formControlName="weight" class="form-control" id="weight">
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Mô tả</label>
+      <textarea name="description" id="description" cols="55" rows="4" placeholder="Mô tả về bản thân" formControlName="description"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="condition" class="form-label">Điều kiện với người thuê</label>
+      <input type="text" formControlName="condition" class="form-control" id="condition">
+    </div>
+    <div class="mb-3">
+      <label for="link_facebook" class="form-label">Link Facebook</label>
+      <input type="text" formControlName="link_facebook" class="form-control" id="link_facebook">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Anh</label>
+      <button (click)="addImage()">Thêm Anh</button>
+      <ng-container formArrayName="imageList">
+        <div *ngFor="let control of formGroup.value.imageList; index as i">
+          <input [formControl]="formGroup.value.imageList[i]" />
+        </div>
+      </ng-container>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Dich vu</label>
+      <button (click)="addService()">Dich vu</button>
+      <ng-container formArrayName="serviceByProviderList">
+        <div *ngFor="let control of formGroup.value.serviceByProviderList; index as i">
+          <input [formControl]="formGroup.value.serviceByProviderList[i]" />
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="mb-3">
+      <span>Sở thích</span>
+      <select name="hobby" id="hobby" multiple formControlName="hobbyList" class="hobby_select" style="width: 120px">
+        <option *ngFor="let h of hobbyListGet;index as i" value="{{hobbyListGet[i].id}}" class="hobby_select">{{hobbyListGet[i].name}}</option>
+      </select>
+    </div>
+
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Bạn đồng ý với các điều khoản của chúng tôi</label>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
