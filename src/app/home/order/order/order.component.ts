@@ -40,7 +40,8 @@ export class OrderComponent implements OnInit {
   public book(orderForm: any): void{
     orderForm.value.serviceByProviderList = this.serviceOption;
     orderForm.value.userProvider = this.provider;
-    this.orderService.createOrder(orderForm.value).subscribe((data) => {
+    this.orderService.createOrder(orderForm.value).subscribe(
+      (data) => {
       this.order = data;
       console.log(this.order);
     });
