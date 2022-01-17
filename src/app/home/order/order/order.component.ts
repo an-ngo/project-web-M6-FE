@@ -30,15 +30,18 @@ export class OrderComponent implements OnInit {
       for (let i = 0; i < this.serviceOption.length; i++){
         if (this.serviceOption[i] == service){
           this.serviceOption.splice(i, 1);
+          console.log(this.serviceOption);
           return;
         }
       }
       this.serviceOption.push(service);
+      console.log(this.serviceOption);
   }
   public book(orderForm: any): void{
     orderForm.value.serviceByProviderList = this.serviceOption;
     orderForm.value.userProvider = this.provider;
-    this.orderService.createOrder(orderForm.value).subscribe((data) => {
+    this.orderService.createOrder(orderForm.value).subscribe(
+      (data) => {
       this.order = data;
       console.log(this.order);
     });

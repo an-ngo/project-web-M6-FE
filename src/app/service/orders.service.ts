@@ -36,4 +36,10 @@ export class OrdersService {
   public deleteOrder(id: any): Observable<any>{
     return this.http.delete(`${this.URL_API}/orders/${id}`);
   }
+  public userBookProvider(): Observable<any>{
+    return this.http.get(`${this.URL_API}/orders/user-book`, this.httpOptions);
+  }
+  public otherUserBook(): Observable<any>{
+    return this.http.get(`${this.URL_API}/orders/book-provider`, this.httpOptions);
+  }
 }

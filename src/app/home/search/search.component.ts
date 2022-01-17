@@ -8,14 +8,26 @@ import {HomeService} from "../../service/home/home.service";
 })
 export class SearchComponent implements OnInit {
   providers: any;
+  pages: any[] = [];
+  formSearch: any;
 
   constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
   }
   public search(formSearch: any): void {
+    this.formSearch = formSearch.value;
     console.log(formSearch.value);
-    this.homeService.search(formSearch.value).subscribe((data) => {
+    this.homeService.search(this.formSearch,0).subscribe((data) => {
+      this.providers = data.content;
+      console.log(data);
+      for (let i = 0; i < data.totalPages; i++){
+        this.pages[i] = i;
+      }
+    });
+  }
+  public nextPage(page: any): void {
+    this.homeService.search(this.formSearch, page).subscribe((data) => {
       this.providers = data.content;
     });
   }
