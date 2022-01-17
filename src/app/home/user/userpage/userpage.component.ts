@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormArray, FormControl, FormGroup} from "@angular/forms";
+import {MapsService} from "../../../service/map/maps.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-userpage',
@@ -21,9 +23,17 @@ export class UserpageComponent implements OnInit {
     condition: new FormControl(),
     link_facebook: new FormControl('')
   })
-  constructor() { }
+  constructor(
+    private mapService: MapsService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  showMap() {
+    this.mapService.getLocation();
+    this.router.navigateByUrl("/map")
+
+  }
 }

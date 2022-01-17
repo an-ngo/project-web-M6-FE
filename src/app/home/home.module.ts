@@ -8,6 +8,8 @@ import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {CarouselModule} from "ngx-owl-carousel-o";
 import { SearchComponent } from './search/search.component';
+import {MapComponent} from "./map/map.component";
+import {LeafletModule} from "@asymmetrik/ngx-leaflet";
 
 
 @NgModule({
@@ -15,7 +17,8 @@ import { SearchComponent } from './search/search.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    SearchComponent
+    SearchComponent,
+    MapComponent
   ],
   imports: [
     CommonModule,
@@ -23,6 +26,8 @@ import { SearchComponent } from './search/search.component';
     ReactiveFormsModule,
     FormsModule,
     CarouselModule,
+    LeafletModule,
+
   ]
 })
 export class HomeModule { }

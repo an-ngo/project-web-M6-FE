@@ -27,6 +27,11 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "./node_modules/leaflet/dist/images",
+                "output": "leaflet/"
+              },
               "src/favicon.ico",
               "src/assets"
             ],
@@ -103,7 +108,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/leaflet/dist/leaflet.scss"
             ],
             "scripts": []
           }

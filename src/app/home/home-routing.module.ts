@@ -6,6 +6,7 @@ import {LoginComponent} from "./login/login.component";
 import {CarouselModule} from "ngx-owl-carousel-o";
 import {SearchComponent} from "./search/search.component";
 import {ProviderComponent} from "./user/provider/provider.component";
+import {MapComponent} from "./map/map.component";
 
 const routes: Routes = [
   {
@@ -28,6 +29,9 @@ const routes: Routes = [
   },
   {
     path: 'provider/:id', component: ProviderComponent
+  },
+  {
+    path: 'map' , component: MapComponent
   }
 ];
 

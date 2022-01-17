@@ -11,6 +11,7 @@ import {AngularFireModule} from "@angular/fire/compat";
 import {environment} from "../environments/environment.prod";
 import {Router, RouterModule, ROUTES} from "@angular/router";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {LeafletModule} from "@asymmetrik/ngx-leaflet";
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     RouterModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent]
