@@ -31,7 +31,9 @@ const routes: Routes = [
     path: 'provider/:id', component: ProviderComponent
   },
   {
-    path: 'map' , component: MapComponent
+    path: 'map' , component: MapComponent},
+  {
+    path: 'order', loadChildren: () => import('./order/order.module').then(modules => modules.OrderModule)
   }
 ];
 

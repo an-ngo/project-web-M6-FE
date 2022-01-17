@@ -25,8 +25,9 @@ export class LoginComponent implements OnInit {
         window.sessionStorage.setItem("avatar", data.avatar);
         window.sessionStorage.setItem("name", data.name);
         for (let i = 0; i < data.roles.length; i++){
-          window.sessionStorage.setItem("role", data.roles[i].authority);
+          window.sessionStorage.setItem("role"+[i], data.roles[i].authority);
         }
+        window.sessionStorage.setItem("username", data.username);
         this.router.navigate(['']).then(()=>{
           window.location.reload();
         });
