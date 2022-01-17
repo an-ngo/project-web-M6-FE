@@ -30,10 +30,12 @@ export class OrderComponent implements OnInit {
       for (let i = 0; i < this.serviceOption.length; i++){
         if (this.serviceOption[i] == service){
           this.serviceOption.splice(i, 1);
+          console.log(this.serviceOption);
           return;
         }
       }
       this.serviceOption.push(service);
+      console.log(this.serviceOption);
   }
   public book(orderForm: any): void{
     orderForm.value.serviceByProviderList = this.serviceOption;

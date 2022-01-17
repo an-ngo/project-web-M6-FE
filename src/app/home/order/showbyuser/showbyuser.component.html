@@ -1,0 +1,25 @@
+<h1>Order Manager</h1>
+<label class="container">
+  <input type="radio" checked="checked" name="radio" (click)="chageListOrder('user-book')">List orders đã book
+  <span class="checkmark"></span>
+</label>
+<label class="container" *ngIf="role == 'ROLE_PROVIDER'">
+  <input type="radio" checked="checked" name="radio" (click)="chageListOrder('other-user-book')"> List orders của khách
+  <span class="checkmark"></span>
+</label>
+<table *ngIf="orders.length > 0">
+  <tr>
+    <th>Tên Khách Hàng</th>
+    <th>Tên Cháu</th>
+    <th>Ngày Book</th>
+    <th>Trạng thái order</th>
+    <th>Xem chi tiết</th>
+  </tr>
+  <tr *ngFor="let order of orders">
+    <td>{{order.user.name}}</td>
+    <td>{{order.userProvider.name}}</td>
+    <td>{{order.date}}</td>
+    <td>{{order.statusOrder}}</td>
+    <td><a routerLink="/order/chi-tiet/{{order.id}}">Chi tiết</a></td>
+  </tr>
+</table>

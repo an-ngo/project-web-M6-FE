@@ -5,12 +5,14 @@ import { OrderRoutingModule } from './order-routing.module';
 import {OrderComponent} from "./order/order.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { InfoOrderComponent } from './info-order/info-order.component';
+import { ShowbyuserComponent } from './showbyuser/showbyuser.component';
 
 
 @NgModule({
   declarations: [
     OrderComponent,
-    InfoOrderComponent
+    InfoOrderComponent,
+    ShowbyuserComponent
   ],
   imports: [
     CommonModule,

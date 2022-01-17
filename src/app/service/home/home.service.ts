@@ -23,8 +23,8 @@ export class HomeService {
   public getTop6ViewPage(): Observable<any>{
     return this.http.get(`${this.URL_API}/users/find-top6-viewpage`);
   }
-  public search(formSearch: any): Observable<any>{
-    return this.http.post(`${this.URL_API}/users/search`, formSearch);
+  public search(formSearch: any, page: any): Observable<any>{
+    return this.http.post(`${this.URL_API}/users/search?page=${page}`, formSearch);
   }
   public findProvider(id: any): Observable<any>{
     return this.http.get(`${this.URL_API}/users/${id}`);
